@@ -6,14 +6,14 @@ export const ContactsList = ({ contacts, onDeleteButton }) => {
     <div className={css.contacts}>
       {contacts.map(({ id, name, number }) => {
         return (
-          <marker key={id} className={css.marker}>
+          <div key={id} className={css.marker}>
             <div className={css.contactItem}>
               {`${name}: ${number}`}
               <ButtonDelete actionHandler={() => onDeleteButton(id)}>
                 X
               </ButtonDelete>
             </div>
-          </marker>
+          </div>
         );
       })}
     </div>
